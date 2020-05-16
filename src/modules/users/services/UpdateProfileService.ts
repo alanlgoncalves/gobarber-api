@@ -1,9 +1,9 @@
-import { inject, injectable } from 'tsyringe';
 import IHashProvider from '@modules/users/providers/HashProvider/models/IHashProvider';
-
-import IUsersRepository from '../repositories/IUsersRepository';
+import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import User from '@modules/users/infra/typeorm/entities/User';
 import AppError from '@shared/errors/AppError';
+
+import { inject, injectable } from 'tsyringe';
 
 interface IRequest {
   user_id: string;
