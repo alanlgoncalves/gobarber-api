@@ -1,7 +1,10 @@
 .vscode
 .idea
 .idea
+.env
 .DS_Store
+
+ormconfig.json
 
 coverage/
 node_modules/
