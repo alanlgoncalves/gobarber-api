@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "stable"
+sudo: false
+install: true
+script:
+  - yarn build
+  - yarn test --no-cache
+cache:
+  yarn: true
+  directories:
+    - node_modules

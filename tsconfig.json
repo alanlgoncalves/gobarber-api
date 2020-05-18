@@ -23,5 +23,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": ["node_module", "./dist", "prettier.config.js", "jest.config.js"]
 }
