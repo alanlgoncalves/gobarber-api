@@ -4,6 +4,7 @@ node_js:
 sudo: false
 install: true
 script:
+  - yarn install
   - yarn build
   - yarn test --no-cache
 cache:
