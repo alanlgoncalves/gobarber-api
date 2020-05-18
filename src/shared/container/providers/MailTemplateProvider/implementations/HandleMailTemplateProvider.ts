@@ -10,7 +10,7 @@ class HandleMailTemplateProvider implements IMailTemplateProvider {
     variables,
   }: IParseMailTemplateDTO): Promise<string> {
     const templateFileContent = await fs.promises.readFile(file, {
-      encoding: 'UTF-8',
+      encoding: 'utf-8',
     });
 
     const parseTemplate = handlebars.compile(templateFileContent);
