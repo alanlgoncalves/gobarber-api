@@ -1,4 +1,4 @@
-import ISendMailDTO from '@shared/container/providers/MailProvider/ISendMailDTO';
+import ISendMailDTO from '@shared/container/providers/MailProvider/models/ISendMailDTO';
 import IMailProvider from '@shared/container/providers/MailProvider/models/IMailProvider';
 
 export default class FakeMailProvider implements IMailProvider {
