@@ -1,8 +1,8 @@
 import { inject, injectable } from 'tsyringe';
 import AppError from '@shared/errors/AppError';
+import IStorageProvider from '@shared/container/providers/StorageProvider/models/IStorageProvider';
 import User from '../infra/typeorm/entities/User';
 
-import IStorageProvider from '@shared/container/providers/StorageProvider/models/IStorageProvider';
 import IUsersRepository from '../repositories/IUsersRepository';
 
 interface IRequest {
@@ -15,6 +15,7 @@ class UpdateUserAvatarService {
   constructor(
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
+
     @inject('StorageProvider')
     private storageProvider: IStorageProvider,
   ) {}
