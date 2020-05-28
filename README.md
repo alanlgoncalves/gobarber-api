@@ -76,7 +76,7 @@ The docker-compose will start the MongoDB, PostgreSQL and Redis.
 This project use Jest as test framework. To execute the tests, run `yarn test` or `npm test`. The code report will
 be generated in `coverage/lcov-report/index.html` folder.
 
-## Create new migrations
+### Create new migrations
 To create new migrations, run the command bellow:
 
 If you are using NPM run:
