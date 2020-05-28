@@ -6,6 +6,8 @@
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=alanlgoncalves_gobarber-api&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=alanlgoncalves_gobarber-api)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=alanlgoncalves_gobarber-api&metric=security_rating)](https://sonarcloud.io/dashboard?id=alanlgoncalves_gobarber-api)
 
+This project is a back-end API developed for GoBarber [web site](https://github.com/alanlgoncalves/gobarber-web) and [APP](https://github.com/alanlgoncalves/gobarber-app).
+
 ## Technologies
 
 - TypeScript
@@ -34,11 +36,30 @@
 
 ## Project Startup
 
+To run the project locally, you will need the follow dependencies:
+
+- NodeJS (https://nodejs.org/en/download/)
+- NPM (Automatically installed with NodeJS) or YARN (https://classic.yarnpkg.com/pt-BR/docs/install/)
+- docker (https://docs.docker.com/get-docker/)
+- docker-compose (https://docs.docker.com/compose/install/)
+
 First off all, create a `.env` file using `.env.example` file. After that running all the commands bellow:
 
 ```
 $ docker-compose up
+```
 
+If you are using NPM run:
+```
+$ npm install
+
+$ npm typeorm migration:run
+
+$ npm dev:server
+```
+
+If you are using YARN run:
+```
 $ yarn install
 
 $ yarn typeorm migration:run
@@ -47,3 +68,24 @@ $ yarn dev:server
 ```
 
 The docker-compose will start the MongoDB, PostgreSQL and Redis.
+
+## Other information
+
+### Tests and code coverage
+
+This project use Jest as test framework. To execute the tests, run `yarn test` or `npm test`. The code report will
+be generated in `coverage/lcov-report/index.html` folder.
+
+## Create new migrations
+To create new migrations, run the command bellow:
+
+If you are using NPM run:
+
+```
+$ npm migration:create -n MigrationName
+```
+
+If you are using YARN run:
+```
+$ yarn migration:create -n MigrationName
+```
