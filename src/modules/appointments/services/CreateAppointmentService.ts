@@ -18,10 +18,8 @@ class CreateAppointmentService {
   constructor(
     @inject('AppointmentsRepository')
     private appointmentsRepository: IAppointmentsRepository,
-
     @inject('NotificationsRepository')
     private notificationsRepository: INotificationsRepository,
-
     @inject('CacheProvider')
     private cacheProvider: ICacheProvider,
   ) {}
@@ -49,6 +47,7 @@ class CreateAppointmentService {
 
     const findAppointmentInSameDate = await this.appointmentsRepository.findByDate(
       appointmentDate,
+      provider_id,
     );
 
     if (findAppointmentInSameDate) {
