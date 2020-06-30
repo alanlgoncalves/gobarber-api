@@ -1,5 +1,5 @@
 # GOBARBER-API
-![CI/CD](https://github.com/alanlgoncalves/gobarber-api/actions?query=workflow%3ACI%2FCD)
+[![CI/CD](https://github.com/alanlgoncalves/gobarber-api/workflows/CI/CD/badge.svg)](https://github.com/alanlgoncalves/gobarber-api/actions?query=workflow%3ACI%2FCD)
 [![Coverage Status](https://coveralls.io/repos/github/alanlgoncalves/gobarber-api/badge.svg?branch=master&kill_cache=1)](https://coveralls.io/github/alanlgoncalves/gobarber-api?branch=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alanlgoncalves_gobarber-api&metric=alert_status)](https://sonarcloud.io/dashboard?id=alanlgoncalves_gobarber-api)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=alanlgoncalves_gobarber-api&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=alanlgoncalves_gobarber-api)
