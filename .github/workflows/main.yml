@@ -12,12 +12,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Setup Node.js environment
+    - name: Setup Node.js
       uses: actions/setup-node@v2.1.0
       with: 
         node-version: 12.x
 
-    - name: Install Dependences
+    - name: Install dependences
       run: yarn
       
     - name: Build
@@ -26,8 +26,10 @@ jobs:
     - name: Tests
       run: yarn test --no-cache
     
-    - name: Generate coverage and send to C overalls
-      run: yarn coveralls
+    - name: Coveralls
+      uses: coverallsapp/github-action@v1.1.1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }
     
     - name: Copy files via SSH
       uses: appleboy/scp-action@master
