@@ -43,7 +43,7 @@ export default {
   config: {
     disk: {},
     aws: {
-      bucket: 'alansantos-app-gobarber',
+      bucket: 'alansantos-dev',
     },
   },
 } as IUploadConfig;

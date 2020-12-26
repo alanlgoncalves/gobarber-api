@@ -29,12 +29,13 @@ class S3StorageProvider implements IStorageProvider {
     await this.client
       .putObject({
         Bucket: uploadConfig.config.aws.bucket,
-        Key: file,
+        Key: `gobarber/${file}`,
         ACL: 'public-read',
         Body: fileContent,
         ContentType,
       })
-      .promise();
+      .promise()
+      .catch(err => console.error(err));
 
     await fs.promises.unlink(originalPath);
 
@@ -45,9 +46,10 @@ class S3StorageProvider implements IStorageProvider {
     await this.client
       .deleteObject({
         Bucket: uploadConfig.config.aws.bucket,
-        Key: file,
+        Key: `gobarber/${file}`,
       })
-      .promise();
+      .promise()
+      .catch(err => console.error(err));
   }
 }
 
